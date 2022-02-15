@@ -1,21 +1,17 @@
 def seq_ping():
     print("Ok")
 
-def valid_filename():
-    exit = False
-    while not exit:
-        filename = input("What file do you want to open?")
-        try:
-            FOLDER = "./MyFiles/"
-            gene = input("Choose a gene:")
-            f = open(FOLDER + gene + ".txt")
-            exit = True
-            return f.read()
-        except FileNotFoundError:
-            print("File does not exist. Provide another.")
 
+from pathlib import Path
 
-def seq_read_fasta(gene):
-    full_seq = open(gene, "r").read()
-    full_seq = seq[seq.find("\n")].replace("\n", "")
-    return full_seq
+def first_20_basis():
+    filename = input("DNA file: ")
+    try:
+        file_contents = Path(filename).read_text()
+        lines = file_contents.splitlines()
+        body = lines[0:20]
+        return body
+    except FileNotFoundError:
+        print(f"[Error]: file '{filename}' not found ")
+    except IndexError:
+        print(f"file '{filename}' is empty")
