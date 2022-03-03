@@ -6,17 +6,16 @@ def seq_ping():
 
 def seq_read_fasta(filename):
     from pathlib import Path
-
-        file_contents = Path(filename).read_text()
-        lines = file_contents.splitlines()
-        body = lines[1:]
-        sequence = ""
-        for line in body:
-            sequence += line
-        return sequence
+    file_contents = Path(filename).read_text()
+    lines = file_contents.splitlines()
+    body = lines[1:]
+    sequence = ""
+    for line in body:
+        sequence += line
+    return sequence
 
 def seq_len(seq):
-    ruturn len(seq)
+    return len(seq)
 
 def seq_count_base(seq, base):
     return seq.count
