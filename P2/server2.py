@@ -1,4 +1,5 @@
 import socket
+import termcolor
 
 PORT = 8081
 IP = "localhost"
@@ -17,7 +18,8 @@ try:
 
         msg_bytes = client_socket.recv(2048)
         msg = msg_bytes.decode("utf-8")
-        print(f"Message from client: {msg}")
+        print(f"Message from client: " end="")
+        termcolor.cprint(msg, 'green')
 
         msg = "Hello from the server!"
         msg_bytes = str.encode(msg)
