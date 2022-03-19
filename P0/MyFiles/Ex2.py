@@ -1,6 +1,6 @@
 from Seq0 import *
 
-FOLDER = "../sesion4/"
+FOLDER = "../Session-04/"
 
 filename = input("File's name: ")
 
