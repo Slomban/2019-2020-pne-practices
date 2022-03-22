@@ -10,6 +10,7 @@ SERVER_IP = "localhost"
 SERVER_PORT = 8081
 
 c = Client(SERVER_IP, SERVER_PORT)
+print(c)
 genes_list = ["U5", "FRAT1", "ADA"]
 for gene in genes_list:
     s = Seq()

@@ -1,6 +1,6 @@
 import socket
 
-PORT = 8081
+PORT = 8087
 IP = "localhost"
 MAX_OPEN_REQUESTS = 5
 
@@ -10,7 +10,7 @@ try:
     server_socket.bind((IP, PORT))
     server_socket.listen(MAX_OPEN_REQUESTS)
     while True:
-        print(f"Waiting for connections at ({IP}: {PORT}...")
+        print(f"Waiting for connections at ({IP}: {PORT}...)")
         (client_socket, client_address) = server_socket.accept()
         n += 1
         print(f"Connection {n} from ({client_address})")

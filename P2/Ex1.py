@@ -12,4 +12,4 @@ c = Client(SERVER_IP, SERVER_PORT)
 
 c.ping()
 
-print(f"Server's address: ({c.SERVER_IP}:{c.SERVER_PORT}")
+print(f"Server's address: ({c.server_ip}:{c.server_port})")

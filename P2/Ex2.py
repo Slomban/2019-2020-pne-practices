@@ -10,6 +10,4 @@ SERVER_PORT = 8081
 
 c = Client(SERVER_IP, SERVER_PORT)
 
-
-
 print(c)
